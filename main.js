@@ -1,13 +1,13 @@
-$('#checkbox_filter').change(function(){
-  var filter = $('#checkbox_filter');
+$('#filter-form fieldset').change(function () {
+  var filter = $('#filter-form');
   $.ajax({
-      url:filter.attr('action'),
-      data:filter.serialize(),
-      type:filter.attr('method'),
+    url: filter.attr('action'),
+    data: filter.serialize(),
+    type: filter.attr('method'),
 
-      success:function(data){
-          $('.post-wrapper-class-here').html(data);
-      }
+    success: function (data) {
+      $('#archive').html(data);
+    }
   });
   return false;
 });
