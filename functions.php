@@ -63,7 +63,7 @@ function pixel_kicks_checkbox_filter(){
 
     if ( ! empty( $cat_terms ) ) {
         $tax_query[] = array(
-        'taxonomy' => 'product_cat',
+        'taxonomy' => 'cat',
         'field'    => 'slug',
         'terms'    => $cat_terms,
         );
